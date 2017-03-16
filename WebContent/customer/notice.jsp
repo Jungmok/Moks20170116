@@ -198,7 +198,6 @@
 							<tr>
 								<td>번호</td>
 								<td>제목</td>
-								<td>내용</td>
 								<td>작성자</td>
 								<td>작성일</td>
 								<td>조회수</td>
@@ -218,7 +217,6 @@
 							<tr>
 								<td><%=v.getCode() %> </td>
 								<td><%=v.getTitle() %> </td>
-								<td><%=v.getContent() %></td>
 								<td><%=v.getWriter() %></td>
 								<td><%=v.getRegDate() %> </td>
 								<td><%=v.getHit() %> </td>

@@ -9,5 +9,9 @@
 	String content=request.getParameter("content");
 	
 	NoticeDao noticeDao = new MySQLNoticeDao();
-	List<NoticeView> list = noticeDao.getList();
+	int result = noticeDao.add(title, content, "ynwa");
+	
+	if(result>0)
+		//목록으로가기->출력도구로
+		response.sendRedirect("notice.jsp");
 %>

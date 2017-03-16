@@ -117,14 +117,54 @@ public class MySQLNoticeDao implements NoticeDao{
 
 	@Override
 	public int add(Notice notice) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		String codeSql ="select max(CAST(CODE AS UNSIGNED))+1 CODE from NOTICE";
+		String sql = "INSERT INTO NOTICE(CODE,TITLE,WRITER,CONTENT) VALUE(?,?,?,?)";
+		int result=0;
+	      
+	    try {
+	    	Class.forName("com.mysql.jdbc.Driver");
+			
+	    	String url = "jdbc:mysql://211.238.142.84/newlecture?autoReconnect=true&amp;useSSL=false&characterEncoding=UTF-8";
+	    	Connection con = DriverManager.getConnection(url, "newlec", "sclass");
+	    	
+	    	Statement codeSt = con.createStatement();
+	    	ResultSet rs = codeSt.executeQuery(codeSql);
+		    rs.next();
+		    String code = rs.getString("CODE");
+		    rs.close();
+		    codeSt.close();
+	    	
+	    	PreparedStatement st = con.prepareStatement(sql);
+		    st.setString(1,code);//code는 알아서.. 위에 처럼 안하고 서브쿼리 사용해도 됨
+		    st.setString(2, notice.getTitle());
+		    st.setString(3, notice.getWriter());
+		    st.setString(4, notice.getContent());
+		    		    
+		    result = st.executeUpdate();
+		   	
+		    st.close();
+		    con.close();
+		    
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+		return result;
 	}
 
 	@Override
 	public int add(String title, String content, String writer) {
-		// TODO Auto-generated method stub
-		return 0;
+		Notice notice = new Notice();
+		notice.setTitle(title);
+		notice.setContent(content);
+		notice.setWriter(writer);
+		
+		return add(notice);
 	}
 	
 	
