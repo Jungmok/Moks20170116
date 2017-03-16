@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+ /*------------------------------------------------------*/
+ window.addEventListener("load",function(){
+	var p1 = document.getElementById("p1");
+	var runButton = document.getElementById("run-button");
+	
+	runButton.onclick=function(){
+		//p1.parentNode.innerText="오마이";
+		/* alert(p1.previousSibling.nodeType);
+		alert(p1.previousSibling.nodeName);
+		alert(p1.previousSibling.nodeValue); */
+		/* var inputs = p1.getElementsByTagName("input"); //element 노드 -> 태그명으로 바로 찾기위함.. 이거 편함 ㅋㅋ
+		inputs[0].value="오케바리"; */
+		/* var input = document.querySelector("#p1>input:first-child"); //css셀렉터처럼 해서 바로 ㅋㅋㅋㅋ노드말구 element노드중에서 찾기임
+		input.value="오케바리"; */
+		var inputs = document.querySelectorAll("#p1>input"); //array로
+		/* inputs[0].value="오케바리"; */
+		for(var i in inputs)
+			inputs[i].value="오케바리"+(parseInt(i)+1);
+	};
+	
+});
+ 
+ /*------------------------------------------------------*/
+ 
+window.addEventListener("load",function(){
+	var srcText = document.querySelector("#src-Text");
+	/* var borderText = document.querySelector("#border-text"); */
+	var borderColor = document.querySelector("#border-color");
+	var borderWidth = document.querySelector("#border-width");
+	var borderStyle = document.querySelector("#border-style");	
+	var changeButton = document.querySelector("#change-button");
+	var img1 = document.querySelector("#img1");
+	
+	changeButton.onclick=function(){
+		img1.src="images/"+srcText.value;
+		/* img1.style.border=borderText.value; */
+		/* img1.style["border-color"]= borderColor.value; */
+		img1.style.borderColor= borderColor.value;
+		img1.style.borderWidth= borderWidth.value;
+		img1.style.borderStyle= borderStyle.value;
+	}
+});
+/*------------------------------------------------------*/
+ 
+window.addEventListener("load",function(){
+	var addButton = document.querySelector("#add-button");
+	var deleteButton = document.querySelector("#delete-button");
+	var cloneButton = document.querySelector("#clone-button");
+	var downButton = document.querySelector("#down-button");
+	var container = document.querySelector("#container");
+	var cursor = document.querySelector("#cursor");
+	
+	addButton.onclick=function(){
+		//이미지 노드 생성
+		var img = document.createElement("img");
+		
+		//이미지 속성,스타일설정
+		img.src="images/champions0405.jpg";
+		img.style.width= "100px";
+		img.style.height= "200px";
+		
+		//노드를 document에 추가 document Object (document Object Model)를 이용해서 
+		container.appendChild(img);
+	}
+	
+	deleteButton.onclick=function(){
+		var last = container.querySelector("img:last-child");
+		
+		container.removeChild(last);
+	}
+	
+	cloneButton.onclick=function(){
+		var clone = container.cloneNode(true);
+		
+		//container의 부모를 찾아서 .appendChild(clone)
+		
+		container.parentNode.appendChild(clone);
+	}
+	
+	downButton.onclick=function(){
+		var parent = container.parentElement;
+		var target = cursor.nextElementSibling; //cursor 다음 녀석
+		/* parent.firstElementChild; */
+		var old = parent.replaceChild(cursor,target);
+		
+		parent.insertBefore(old,cursor);
+		
+	}
+				
+	
+});
+
+</script>
+</head>
+<body>
+	<input id="add-button" type="button" value="이미지추가"/>
+	<input id="delete-button" type="button" value="이미지삭제"/>
+	<input id="clone-button" type="button" value="통째로복제"/>
+	<input id="down-button" type="button" value="밑으로 내리기"/>
+	<div>
+		<div id="cursor">
+			바뀔놈
+		</div>
+		<div id="container">
+		</div>
+	</div>
+	<hr/>
+	images/<input id="src-Text" value="champions0405.jpg"/><br/>
+	<!-- 경계선<input id="border-text" value="3px solid red"/><br/> -->
+	경계선색<input id="border-color" value="red"/><br/>
+	경계선두께<input id="border-width" value="3px"/><br/>
+	경계선스타일<input id="border-style" value="solid"/><br/>
+   	<input id="change-button" type="button"  value="변경" /><br/>
+   	<img id="img1" src="images/champions0405.jpg" />   
+	<hr>
+	<input id="run-button" type="button" value="실행"/>
+	<div>
+      <font>font</font>
+      <input />
+   </div>
+   <!-- <p> -->                                          <!-- </p> 알아서 만든대..-->
+   <form  id="p1">
+     test1
+     <input />
+     <input />
+   </form>
+   test2
+   <p>
+   para
+   </p>
+   <!-- <p> --></p>
+   hello
+   <!-- 오마이 갓 뚜-->
+</body>
+</html>

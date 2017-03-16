@@ -1,0 +1,178 @@
+@CHARSET "UTF-8";
+@IMPORT url("../reset.css");
+@IMPORT url("layout.css");
+
+/* --------------common style----------------------------------------- */
+.hidden{
+	display: none;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* --------------header style----------------------------------------- */
+
+.navbar{	
+	overflow: hidden;
+	background: #fff;
+	border-bottom : 1px solid  #979797;
+	opacity : 0.8;
+	position: fixed;
+	width: 100%;
+	height: 40px;
+	box-shadow: 0px 0px 2px #3f3f3f;
+	z-index: 10;
+	font-family: 맑은 고딕, 고딕, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.navbar-menu{
+	display: inline-block;
+	
+}
+.navbar-menu ul{
+	overflow: auto;
+		
+}
+.navbar-menu li{
+	float: left;
+}
+.navbar-menu li a{
+	display: block;
+	margin-right: 20px;
+	padding: 9.5px;
+	text-decoration: none;
+	text-align: center;
+	
+}
+.navbar-menu li a:hover{
+	border-bottom : 3px solid #7E57C2;
+}
+.card-grid {
+  width:100%;
+  
+}
+.card-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card-wrap {
+  float:left;
+  width:100%;
+  padding:5px;
+}
+@media (min-width: 500px) {
+  .card-wrap {
+    width:50%;
+  }
+}
+@media (min-width: 720px) {
+  .card-wrap {
+    width:25%;
+  }
+}
+
+.card {
+  background-color:white;
+  width : 300px;
+  height: 300px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  border-bottom:2px solid #ccc;
+  box-shadow: 3px 4px 7px #424042;
+}
+.card > div {
+  padding:0 10px;
+}
+.card-image{
+  width : 300px;
+  height: 300px;
+}
+.card-header{
+	width : 100%;
+	height: 100px;
+	border: 1px solid red;
+}
+.card-body{
+	width : 100%;
+	height: 300px;
+	border: 1px solid green;
+}
+.card-footer{
+	width : 100%;
+	height: 100px;
+	border: 2px solid blue;
+}
+
+#header{
+	
+}
+#header-logo{
+	position: absolute;
+	left: 30px;
+	line-height: 50px;
+	text-align : center;
+	font: italic bold 30px sans-serif;
+	color: #4A148C;
+}
+#main-menu{
+	position: absolute;
+	left:150px;
+}
+#account-menu{
+	position: absolute;
+	right: 20px;
+	
+}
+/* --------------visual style------------------------------------------- */
+#visual{
+	
+}
+#account{
+	display: block;
+	position: absolute;
+	width: 150px;
+	top: 140px;
+	left:575px;
+	
+}
+.profile{
+	text-align: center;
+	
+}
+.thumbnail{
+	position: relative;
+	display: inline-block;
+	
+	
+}
+.thumbnail img{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+.name{
+	color: #fff;
+}
+
+
+
+/* --------------main style------------------------------------------- */
+
+
+
+
+
+
+/* --------------footer style----------------------------------------- */
+
+
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

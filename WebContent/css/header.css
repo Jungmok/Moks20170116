@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+
+
+.hr-menu{
+	display: inline-block; 
+}
+ 
+.hr-menu ul{
+	overflow: auto; 
+}
+
+.hr-menu li{
+	float: left;
+}
+
+.hr-menu li:first-child{
+	background: none ;
+	padding-left: 0px !important;
+}
+
+.hr-menu li a{
+	color:#979797;
+	text-decoration: none;
+}
+
+.hr-menu li a:hover{
+	text-decoration: underline;
+}
+
+
+/* ------header style-------------------------------------- */
+#logo{
+	position: absolute;
+	top: 23px;
+	left: 0px;
+}
+
+#main-menu{
+	position: absolute;
+	top: 27px;
+	left: 200px;
+}
+
+#main-menu a{
+	font-family: 맑은고딕, 고딕, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color:#000000;
+}
+
+
+#main-menu a{
+	color:#000000;
+}
+
+#main-menu li{
+	padding-left: 24px;
+	background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+}
+
+#account-menu{
+	position: absolute;
+	top: 20px;
+	right: 0px;
+}
+
+#account-menu li{
+	padding-left: 24px;
+	background: url("../images/bg-main-menu-vsp.png") no-repeat 13px center;
+}
+
+#member-menu{
+	position: absolute;
+	top: 40px;
+	right: 0px;
+}
+
+#member-menu li:first-child{
+	background: url("../images/menuMyPage.png") no-repeat center;
+	
+}
+
+#member-menu li:LAST-CHILD{
+	background: url("../images/txt-customer.png") no-repeat center;
+
+}
+
+.clear-fix{
+  overflow: auto;
+  zoom: 1;
+}
+
+/* ------lecture search style-------------------------------------- */
+#lecture-search-form{
+	position: absolute;
+	top: 21px;
+	left: 468px;
+	
+	width: 308px;
+	height: 25px;
+	border: 5px solid #8CBA34;
+}
+
+#lecture-search-form fieldset label {
+   font-size:11px;
+   /* display: block; */
+   width:55px;
+   height:25px;
+   line-height:25px;
+   float: left;
+   font-weight:bold;
+   text-indent: 5px;
+   background: white;
+}
+
+#lecture-search-form fieldset input[type=text] {
+   float: left;
+   border:0px;
+   height:25px;
+   width:calc(100% - 55px - 31px);
+   line-height:25px;
+   background: white;
+}
+
+#lecture-search-form fieldset input[type="submit"] {
+   width:31px;
+   height:25px;
+   line-height:25px;
+   float: left;
+   /* background: blue; */
+   /* display: block; */
+   border: 0px;
+   border-left: 1px solid #8CBA34;
+   /* 
+	border:3px solid #8CBA34;
+	border-left:1px solid #8CBA34; */
+	background: url("../images/btn-zoom.png") no-repeat;
+	cursor: pointer;
+	text-indent: -9999px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/account/style.css" type="text/css" rel="stylesheet">
+
+<script>
+	function onChange() {
+    	var text = document.getElementById("urlid").value;
+    	var name = new Array("서울", "부산", "대전", "대구르르","대구", "서울우우울","서울우울해", "부산아아아산", "대전어어전");
+    	var sw=0;
+    	var strHtml = "";
+     	
+    	strHtml += "<table border ='1' cellpadding='0'>";
+    	strHtml += "<tr><td colspan ='2'></td><tr>";
+    	strHtml += "<tr bgcolor = '#E2E2E2' align='center'>";
+    	strHtml += "<td width = '1%'>번호</td>";
+    	strHtml += "<td style = 'width:1%'>도시명</td>";
+    	strHtml += "</td>";
+    	
+    	for (var i=0; i< name.length;i++) {
+    		if (name[i].substring(0,text.length) == text) {
+    			strHtml += "<tr align='center'>";
+        		strHtml += "<td>" + parseInt(sw+1) + "</td>";
+        		strHtml += "<td>" + name[i] + "</td>";
+        		strHtml += "</tr>";
+    			sw++;
+    		}
+    		if (text=="") strHtml="";
+    	}
+    	strHtml += "</table>";    	
+    	document.getElementById("urlid_confirm").innerHTML=strHtml;	
+   	}
+</script>
+
+</head>
+
+<body>
+
+	<div id="login-background"></div>
+
+	<header id="header"> </header>
+	
+	<main id="main">
+	<div class="content-container">
+
+			<div class = "m-header-box">
+				<input type="text" id="urlid" value="" maxlength="8" placeholder="검색할 도시" onkeyup="onChange()">
+				<div id="urlid_confirm" style="display:inline">
+					
+				</div>
+				
+			</div>
+
+
+		<div class="m-main"'></div>
+		
+		<div class="m-footer">
+	
+		</div>
+
+	</div>
+	</main>
+
+	<footer id="footer"> </footer>
+</body>
+</html>

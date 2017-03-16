@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+@IMPORT url("../reset.css");
+
+@IMPORT url("layout.css");
+
+/* --------------common style----------------------------------------- */
+.hidden {
+	display: none;
+}
+
+/* --------------header style----------------------------------------- */
+.m-header {
+	height: 400px;
+	border-radius: 25px;
+}
+
+.m-main {
+	height: calc(100% - 300px - 130px);
+}
+
+.m-footer {
+	background: green;
+	height: 130px;
+	border-radius: 25px;
+}
+
+/* --------------main style------------------------------------------- */
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 6px 0;
+	/*  display: inline-block;  */
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=textb], select {
+	width: 48.9%;
+	padding: 12px 20px;
+	margin: 6px 0;
+	/* display: inline-block; */
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #30cb47;
+	color: white;
+	padding: 14px 20px;
+	margin: 10px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #51a8ff;
+}
+
+input[id=fb] {
+	padding: 8px 20px;
+	background-color: #ff8080;
+	margin: 5px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[id=naver] {
+	padding: 8px 20px;
+	background-color: #ff80ff;
+	margin: 5px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.title {
+	font-family: 맑은 고딕, 고딕, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align : center;
+	color: #000;
+	background-color: #fafafa; 
+	height:30px;
+	width:100%;	
+	/* margin-left: auto;
+    margin-right:auto;  */
+   	padding-top:5px;
+ 	border-top-left-radius: 5px;
+ 	border-top-right-radius: 5px;
+ }
+
+.other {
+	font-family: 맑은 고딕, 고딕, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000;
+	/*  background-color: red;
+	height:100px;
+	width:100px;
+	margin-left: auto;
+    margin-right:auto; 
+    padding-bottom:3px;  */
+}
+
+.m-header-box {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #e6e6e6;
+	padding: 20px;
+}
+
+.m-footer-box {
+	border-radius: 5px;
+	background-color: #e6e6e6;
+	padding: 20px;
+}
+
+/* --------------footer style----------------------------------------- */
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}

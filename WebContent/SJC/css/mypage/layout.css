@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+#header {
+	
+}
+
+#visual {
+	min-height : 350px;
+	background: url(../../image/visual.png) no-repeat center;
+
+}
+
+#main{
+	min-height : 800px;	
+}
+
+
+
+#footer{
+	min-height:150px;
+	background: #EDE7F6;
+}
+
+.content-container{
+	height: 100%;
+	min-height:inherit;
+    width:1300px;
+    margin-left: auto;
+    margin-right:auto;
+    position: relative;
+	
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

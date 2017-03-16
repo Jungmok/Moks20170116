@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/*  보라색 번호 정리
+  100 #E1BEE7
+  200 #CE93D8
+  400 #AB47BC */
+
+#visual{
+	min-height: 500px;
+	
+	animation-name: visual;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;	
+}
+@keyframes visual {
+    0%  {background: url("../image/visual.png") no-repeat center;}
+    33%  {background: url("../image/visual2.png") no-repeat center;}
+    66%  {background: url("../image/visual3.png") no-repeat center;}
+    100% {background: url("../image/visual4.png") no-repeat center;}
+}
+#main{
+	min-height: 800px;	
+	border: 1px solid green;
+}
+
+#footer{
+	min-height:150px;
+	background: #EDE7F6;
+}
+
+.content-container{
+	height: 100%;
+	min-height:inherit;
+    width:1300px;
+    margin-left: auto;
+    margin-right:auto;
+    position: relative;
+	
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+.hidden{
+	display : none;
+	
+}
+.modal-content{
+	border :none;
+	border-radius: 8px;	
+}
+
+.modal{
+	margin-top : 100px;
+}
+
+.modal-body{
+	background : url("../../image/visual.png")	 no-repeat center;
+	opacity : 20;
+	border-radius: 8px;
+}
+
+
+.modal-body{
+	min-height : 500px;
+	position : relative;
+
+}
+
+.modal-header{
+}
+
+.thumbnail {
+    background : black;
+}
+
+/* .city-img{
+	margin : 20px;
+	float : left:
+} */
+
+
+.city-img img{
+
+}
+
+/* ----------------------------별점 매기기------------------------
+ */
+      .rating {
+          overflow: hidden;
+          display: inline-block;
+      }
+      .rating-input {
+          position: absolute;
+          left: 0;
+          top: -50px;
+      }
+      .rating-star {        
+          display: block;
+          float: right;        
+          width: 16px;
+          height: 16px;
+          background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+      }
+      .rating-star:hover,
+      .rating-star:hover ~ .rating-star,
+      .rating-input:checked ~ .rating-star {
+          background-position: 0 0;
+      }
+      
+ #star-rate-title{
+ 	padding-left : 10px;
+ 	padding-right : 10px;
+ 	border-bottom: 1px solid black;
+ }

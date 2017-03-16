@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+#header{
+	height:70px;
+}
+
+#visual{
+	height:171px;
+	color:white;
+	font-size:50px;
+	border-top: 3px solid #8CBA34;
+	background: #313131 url("../../images/bg-visual.png") no-repeat center;
+	
+	/* background-attachment: scroll;
+	overflow: scroll; */
+}
+
+#body{
+	min-height:300px;
+	border-top: 5px solid #8CBA34;
+	margin-top: 1px;
+}
+
+#body .clearfix{
+	background: url("../../images/bg-body.png") repeat-y ;	
+}
+
+#footer{
+	height:100px;
+	background: #313131;
+}
+
+#aside{
+	float:left;
+	min-height:300px;
+	width:205px;
+	background: url("../../images/bg-aside-title.png") no-repeat  center top;	
+}
+
+#main{
+	position:relative;
+	
+	float:left;
+	min-height:300px;
+	width:755px;
+	
+	box-sizing:border-box;
+	padding-top: 45px;
+	padding-left:35px;	
+}
+
+/* #quick-menu{
+	position:absolute;
+	left:100px;
+	top:100px;
+	
+	width:100px;
+	height:70px;
+	
+	border:1px solid red;
+	
+	background:url("../../images/logo.png") no-repeat left top;
+	background-size:cover; 
+} */
+
+.content-container{
+	margin-left:auto;
+	margin-right:auto;
+	height:100%;/* 왜함?? */
+	min-height:inherit;
+	width:960px;
+	position:relative;
+}
+/* 컨텐트는 이 안에만 있어야 합니다 */
+
